@@ -144,7 +144,7 @@ function updateClock() {
 }
 
 async function loadWordOfTheDay() {
-    const response = await fetch("JapaneseWordofDayData.xlsx");
+    const response = await fetch("JapaneseWordofDayData.csv");
     const text = await response.text();
 
     const rows = text.trim().split("\n").slice(1);
@@ -171,3 +171,4 @@ updateClock();
 setInterval(updateClock, 1000);
 loadWordOfTheDay();
 </script>
+
